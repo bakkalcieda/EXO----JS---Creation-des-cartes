@@ -14,8 +14,9 @@ function creerCarte() {
     // je met le contenu dans la carte avec limage le nom et l'age
     // les ${ } ca permet de mettre les variables dans le texte
     carte.innerHTML = `<img src ="${url}" alt="${nom}"> 
-        <h2>${nom}<h2>
-        <p>${age} ans</p>`
+        <h2>${nom}</h2>
+        <p>${age} ans</p>
+        <div class="close">✖</div>`
 // j'ajoute la carte dans la zone des cartes sur la page
 document.querySelector("#cartes").appendChild(carte)
 
@@ -26,3 +27,14 @@ document.querySelector("#cartes").appendChild(carte)
     document.querySelector("#url").value = ""
 }
 
+// délégation d'événement : les clics sur le conteneur parent
+// comme ca pas besoin d'ajouter un écouteur sur chaque carte
+document.querySelector("#cartes").addEventListener("click", function(event) {
+    // je vérifie que c'est bien la croix qui a été cliquée
+    if (event.target.matches("close")) {
+        // je remonte jusqu'à la carte parent et on  supprime => remove supprime physiquement l'élément html
+        // event.target c'est une propriété qui te donne l'élément sur lequel on a cliqué. C'est de l'information en lecture.
+        // closest c'est la méthode pour remonter dans le html pour trouver le parent correspond au selecteur 
+        event.target.closest(".carte").remove()
+    }
+})
