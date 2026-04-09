@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf6ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ca4caa;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.formulaire {
+    width: 100%;
+    max-width: 700px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 20px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    color: #4b0a3e;
+}
+
+input:hover {
+    background-color:#c9a0dc ;
+}
+
+button {
+    padding: 20px;
+    font-size: 1rem;
+    background-color: #c9a0dc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #b07cc6;
+}
+
+.cartes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.carte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #c9a0dc;
+    border-radius: 12px;
+    padding: 20px;
+    width: 150px;
+    background-color: #fff;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+}
